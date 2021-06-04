@@ -43,17 +43,8 @@ def my_optimal_change(item_cost, amount_paid):
     new_count_pop = new_count.pop()
     new_count_amend = ', '.join(new_count)
     
-    print(f"The optimal change for an item that costs ${item_cost} with an amount paid of ${amount_paid} is {new_count_amend} and {new_count_pop}.")
-    
-    
+    return f"The optimal change for an item that costs ${item_cost} with an amount paid of ${amount_paid} is {new_count_amend}, and {new_count_pop}."
+
 
 # my_optimal_change(62.13, 100)
 # my_optimal_change(31.51, 50)
-
-'''
-> "The optimal change for an item that costs $62.13 with an amount paid of $100 is 1 $20 bill, 1 $10 bill, 1 $5 bill, 2 $1 bills, 3 quarters, 1 dime, and 2 pennies."
-
-optimal_change(31.51, 50)
-> "The optimal change for an item that costs $31.51 with an amount paid of $50 is 1 $10 bill, 1 $5 bill, 3 $1 bills, 1 quarter, 2 dimes, and 4 pennies."
-
-'''
