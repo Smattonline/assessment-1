@@ -23,8 +23,9 @@ class OptimalChangeTestCase(unittest.TestCase):
     
     def test_fourth_case(self):
         '''Check for plural and commas'''
-        output_4 = "The optimal change for an item that costs $25.19 with an amount paid of $100 is 1 $50 bill, 1 $20 bill, 4 $1 bills, 3 quarters, and 6 pennies."
-    
+        output_4 = "The optimal change for an item that costs $25.19 with an amount paid of $100 is 1 $50 bill, 1 $20 bill, 4 $1 bills, 3 quarters, 1 nickel, and 1 penny."
+        self.assertEqual(my_optimal_change(25.19, 100), output_4)
+
     def test_fifth_case(self):
         '''Check for plural and commas'''
         output_5 = "The optimal change for an item that costs $1.22 with an amount paid of $20 is 1 $10 bill, 1 $5 bill, 3 $1 bills, 3 quarters, and 3 pennies."
@@ -37,8 +38,8 @@ class OptimalChangeTestCase(unittest.TestCase):
     
     def test_seventh_case(self):
         '''Check for plural and commas'''
-        output_7 = "The optimal change for an item that costs $25 with an amount paid of $50 is 1 $20 bill, and 1 $5 bill."
-        self.assertEqual(my_optimal_change(25, 50), output_7)
+        output_7 = "The optimal change for an item that costs $2.25 with an amount paid of $10 is 1 $5 bill, 2 $1 bills, and 3 quarters."
+        self.assertEqual(my_optimal_change(2.25, 10), output_7)
 
 if __name__ == '__main__':
     unittest.main()

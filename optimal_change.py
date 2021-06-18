@@ -11,6 +11,7 @@ denominations = {
     '$1 bill': 1.00,
     'quarter': 0.25,
     'dime': 0.10,
+    'nickel': 0.05,
     'penny': 0.01
     }
 
@@ -48,8 +49,9 @@ def my_optimal_change(item_cost, amount_paid):
         if count[iterate] > 1:
             iterate = iterate.replace("bill", "bills")
             iterate = iterate.replace("quarter", "quarters")
-            iterate = iterate.replace("penny", "pennies")
             iterate = iterate.replace("dime", "dimes")
+            iterate = iterate.replace("nickel", "nickels")
+            iterate = iterate.replace("penny", "pennies")
             new_count.append(f"{count[each_count]} {iterate}")
         else:
             iterate = each_count
@@ -79,4 +81,4 @@ def my_optimal_change(item_cost, amount_paid):
 
 # my_optimal_change(62.13, 100)
 # my_optimal_change(31.51, 50)
-# my_optimal_change(25, 50)
+# my_optimal_change(25.19, 100)
