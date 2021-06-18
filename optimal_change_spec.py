@@ -16,6 +16,29 @@ class OptimalChangeTestCase(unittest.TestCase):
         output_2 = "The optimal change for an item that costs $31.51 with an amount paid of $50 is 1 $10 bill, 1 $5 bill, 3 $1 bills, 1 quarter, 2 dimes, and 4 pennies."
         self.assertEqual(my_optimal_change(31.51, 50), output_2)
 
+    def test_third_case(self):
+        '''Check for plural and commas'''
+        output_3 = "This customer gets no change."
+        self.assertEqual(my_optimal_change(36.51, 36.51), output_3)
+    
+    def test_fourth_case(self):
+        '''Check for plural and commas'''
+        output_4 = "The optimal change for an item that costs $25.19 with an amount paid of $100 is 1 $50 bill, 1 $20 bill, 4 $1 bills, 3 quarters, and 6 pennies."
+    
+    def test_fifth_case(self):
+        '''Check for plural and commas'''
+        output_5 = "The optimal change for an item that costs $1.22 with an amount paid of $20 is 1 $10 bill, 1 $5 bill, 3 $1 bills, 3 quarters, and 3 pennies."
+        self.assertEqual(my_optimal_change(1.22, 20), output_5)
+    
+    def test_sixth_case(self):
+        '''Check for plural and commas'''
+        output_6 = "The optimal change for an item that costs $4.98 with an amount paid of $5 is 2 pennies."
+        self.assertEqual(my_optimal_change(4.98, 5), output_6)
+    
+    def test_seventh_case(self):
+        '''Check for plural and commas'''
+        output_7 = "The optimal change for an item that costs $25 with an amount paid of $50 is 1 $20 bill, and 1 $5 bill."
+        self.assertEqual(my_optimal_change(25, 50), output_7)
 
 if __name__ == '__main__':
     unittest.main()
